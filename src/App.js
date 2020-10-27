@@ -20,9 +20,9 @@ class App extends Component {
       alert(numberWiększy);
     }
   }
-  // componentWillUnmount(){
-  //   alert("wywołanie componentWillUnmount");
-  // }
+  //   componentWillUnmount(){//moment przed odmontowaniem komponentu, odmontowywanie będzie następować jak będziemy zmieniać stronę na inną
+  //     alert("nie ucikaj");
+  //   }
   handleClick =()=> {
     this.setState(
       prevState => ({
