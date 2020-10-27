@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+  
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    defaultWelcome: '',
+    number: 0,
+  }
+  componentDidMount(){
+    alert("wywołanie componentDidMount");
+    this.setState({
+      defaultWelcome: "Witamy"
+    })
+  }
+  componentDidUpdate(){
+    // alert("wywołanie componentDidUpdate");
+    let numberWiększy = this.state.number > 10 ? "number wiekszy od 10" : null;
+    if(numberWiększy){
+      alert(numberWiększy);
+    }
+  }
+  // componentWillUnmount(){
+  //   alert("wywołanie componentWillUnmount");
+  // }
+  handleClick =()=> {
+    this.setState(
+      prevState => ({
+        number: prevState.number + 1
+      }))
+  }
+  render() {
+    // 1. Korzystajac z metod cyklu zycia komponentu podmien defaultWelcome na tekst 'Witamy' przy montowaniu komponentu
+    // 2. wyswietl defaultWelcome i number pobierajac go ze state w divie o klasie App
+    // 3. dodaj button ktory na zdarzeniu onClick bedzie powiekszal number o 1
+    // 4. Korzystajac z metod cyklu zycia komponentu wyswietl alert ktory bedzie wyswietlal komunikat ze number jest juz wiekszy od 10, jesli number przekroczy ta wartosc
+    return (
+      <div className="App">
+        {this.state.defaultWelcome}
+        <p>Number : {this.state.number}</p>
+        <button onClick={this.handleClick}>Powiększ</button>
+      </div>
+    );
+  }
 }
 
 export default App;

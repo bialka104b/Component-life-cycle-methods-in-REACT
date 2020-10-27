@@ -1,3 +1,10 @@
+### About project
+- Component life cycle stages in REACT
+1. Using the component life cycle methods, replace the text of the 'defaultWelcome' variable with 'Welcome' while mounting the component.
+2. display the "defaultWelcome" and "number" variables in the "App" class diva, downloading them from state .
+3. Add a "button", which on the "onClick" event will increase the "number" variable by 1.
+4. using the component life cycle methods display an alert, which will display a message that the 'number' variable is already greater than 10 (if the 'number' exceeds this value).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
