@@ -5,6 +5,8 @@
 3. Add a "button", which on the "onClick" event will increase the "number" variable by 1.
 4. using the component life cycle methods display an alert, which will display a message that the 'number' variable is already greater than 10 (if the 'number' exceeds this value).
 
+<img src="./img/Screen.jpg" width="300">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
